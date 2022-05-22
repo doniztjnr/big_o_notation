@@ -1,26 +1,23 @@
 """
-    O(n)
-    The term (n) represent the number of inputs.
+    COMPUTATIONAL COST O(n)
 
-    Making one unique iteration for each value in loop
-    the OPERATIONS increase linearly.
-    This algorithm have a linear time of execution. 
+        Making iteration for each value in loop the OPERATIONS increase 
+        linearly. 
+        TIME and MEMORY increase of according INPUTS size.
+    
+    EXAMPLE 
+        n = 10 going to have Time and Memory different of n = 1_000_000.
 """
 
-import time
-
-lot_of_items: list[str] = ["coffee"] * 10_000
-
-def find_coffee(items: list[str]):
-    start = time.time()
-
-    for item in items: # O(n)
-        if (item == "coffee"):
-            print("Found Coffee")
-
-    finish = time.time()
-
-    print(f"The operation took {(finish - start)} ms")
+def O(n: int):
+    
+    for i in range(n): # O(n)
+        print(i)
+    
+    print(f"Number: {i}")
+    
+def main() -> None:
+    O(10_000)
 
 if __name__ == "__main__":
-    find_coffee(lot_of_items)
+    main()
